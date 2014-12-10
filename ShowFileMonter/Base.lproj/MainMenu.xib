@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6154.17" systemVersion="14B25" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6154.17"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="Voe-Tx-rLC" id="GzC-gU-4Uq"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application"/>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="ShowFileMonster" customModuleProvider="target">
+            <connections>
+                <outlet property="MainWindow" destination="7kq-zE-dAD" id="EpV-tf-61L"/>
+                <outlet property="PrefShowStatusCheck" destination="ht5-gz-O2z" id="awe-Lt-um9"/>
+                <outlet property="SettingsBTN" destination="zhl-Wj-PUR" id="aX6-Hc-3Tx"/>
+                <outlet property="SettingsTEXT" destination="bWA-Dj-TXI" id="A9R-c1-MTx"/>
+                <outlet property="ToggleFileBTN" destination="1hn-mQ-fQX" id="eAB-yw-jPX"/>
+                <outlet property="ToggleFileTEXT" destination="8ex-Fz-xjC" id="pvA-Cb-DiE"/>
+                <outlet property="VersionTEXT" destination="QoY-hc-w0Y" id="bw1-0C-LfY"/>
+                <outlet property="WindowTab" destination="58Z-eE-OSh" id="HKB-ve-g8l"/>
+                <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
+            </connections>
+        </customObject>
+        <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
+            <items>
+                <menuItem title="ShowFileMonter" id="1Xt-HY-uBw">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="ShowFileMonter" systemMenu="apple" id="uQy-DD-JDr">
+                        <items>
+                            <menuItem title="About ShowFileMonster" id="BOF-NM-1cW">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="ShowAboutWindow:" target="Voe-Tx-rLC" id="7zj-gU-jTg"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
+                            <menuItem title="Preferences…" keyEquivalent="," id="CXv-x7-nTw">
+                                <connections>
+                                    <action selector="ShowPrefWindow:" target="Voe-Tx-rLC" id="erJ-sH-r7n"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="cdA-oF-JIX"/>
+                            <menuItem title="Services" id="NMo-om-nkz">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
+                            <menuItem title="Hide ShowFileMonter" keyEquivalent="h" id="Olw-nP-bQN">
+                                <connections>
+                                    <action selector="hide:" target="-1" id="PnN-Uc-m68"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Hide Others" keyEquivalent="h" id="Vdr-fp-XzO">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="hideOtherApplications:" target="-1" id="VT4-aY-XCT"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Show All" id="Kd2-mp-pUS">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="unhideAllApplications:" target="-1" id="Dhg-Le-xox"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
+                            <menuItem title="Quit ShowFileMonter" keyEquivalent="q" id="4sb-4s-VLi">
+                                <connections>
+                                    <action selector="terminate:" target="-1" id="Te7-pn-YzF"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="File" id="dMs-cI-mzQ">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="File" id="bib-Uj-vzu">
+                        <items>
+                            <menuItem title="Close" id="DVo-aG-piG">
+                                <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="setQuit:" target="Voe-Tx-rLC" id="Wue-OQ-Qws"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+            </items>
+        </menu>
+        <window title="Show File Monster" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="QvC-M9-y7g">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="335" y="390" width="584" height="389"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+            <view key="contentView" id="EiT-Mj-1SZ">
+                <rect key="frame" x="0.0" y="0.0" width="584" height="389"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <tabView appearanceType="aqua" fixedFrame="YES" initialItem="fAi-bB-NZj" translatesAutoresizingMaskIntoConstraints="NO" id="58Z-eE-OSh">
+                        <rect key="frame" x="13" y="10" width="558" height="373"/>
+                        <font key="font" metaFont="system"/>
+                        <tabViewItems>
+                            <tabViewItem label="Prefernces" identifier="1" id="fAi-bB-NZj">
+                                <view key="view" ambiguous="YES" id="I1C-A6-DyA">
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button appearanceType="aqua" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ht5-gz-O2z">
+                                            <rect key="frame" x="33" y="-44" width="473" height="18"/>
+                                            <buttonCell key="cell" type="check" title="Show &quot;Show/Hide File&quot; on Status Bar" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="qJF-RQ-azY">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="PrefShowStatusCheckClick_:" target="Voe-Tx-rLC" id="xS5-Tg-s06"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </view>
+                            </tabViewItem>
+                            <tabViewItem label="About" identifier="2" id="AOE-p0-bxj">
+                                <view key="view" id="ZRN-k8-MME">
+                                    <rect key="frame" x="10" y="33" width="538" height="327"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xTO-or-YbX">
+                                            <rect key="frame" x="17" y="51" width="239" height="239"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="logo" id="72b-QZ-6an"/>
+                                        </imageView>
+                                        <textField appearanceType="aqua" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="foI-1G-2Rp">
+                                            <rect key="frame" x="280" y="243" width="243" height="31"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="About ShowFileMonster" id="WUz-5d-Omm">
+                                                <font key="font" metaFont="system" size="18"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField appearanceType="aqua" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GUK-WO-SJI">
+                                            <rect key="frame" x="280" y="67" width="243" height="152"/>
+                                            <textFieldCell key="cell" sendsActionOnEndEditing="YES" id="oaj-Rf-lhT">
+                                                <font key="font" metaFont="system"/>
+                                                <string key="title">ShowFileMonster Functional Show/Hide The Hidden in Finder. 
+ShowFileMonster Development by Nattapong Pullkhow (xenatt).
+
+Contact Developer.
+Email : exenatt@gmail.com
+Twitter : @xenatt</string>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField appearanceType="aqua" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QoY-hc-w0Y">
+                                            <rect key="frame" x="280" y="227" width="243" height="17"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Version 1.0 build 1417316732" id="1pm-rT-Gy7">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="keyboardFocusIndicatorColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                    </subviews>
+                                </view>
+                            </tabViewItem>
+                        </tabViewItems>
+                    </tabView>
+                </subviews>
+            </view>
+            <point key="canvasLocation" x="317" y="858.5"/>
+        </window>
+        <window title="Show File Monter" hidesOnDeactivate="YES" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="default" id="7kq-zE-dAD" customClass="NSPanel">
+            <windowStyleMask key="styleMask" closable="YES" utility="YES" HUD="YES"/>
+            <rect key="contentRect" x="136" y="163" width="315" height="200"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+            <view key="contentView" id="7a8-6c-fFi">
+                <rect key="frame" x="0.0" y="0.0" width="315" height="200"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button appearanceType="aqua" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1hn-mQ-fQX">
+                        <rect key="frame" x="20" y="52" width="129" height="128"/>
+                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="showfile" imagePosition="only" alignment="left" state="on" imageScaling="proportionallyDown" inset="2" id="mmQ-z2-tDE">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="ToggleFileBTNClick_:" target="Voe-Tx-rLC" id="R8s-3E-ow5"/>
+                        </connections>
+                    </button>
+                    <button appearanceType="aqua" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zhl-Wj-PUR">
+                        <rect key="frame" x="164" y="52" width="131" height="128"/>
+                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="setting" imagePosition="only" alignment="center" continuous="YES" state="on" allowsMixedState="YES" imageScaling="proportionallyDown" inset="2" id="nu2-hR-RTw">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="SettingsBTNClick_:" target="Voe-Tx-rLC" id="f1i-2W-XpB"/>
+                        </connections>
+                    </button>
+                    <textField appearanceType="aqua" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bWA-Dj-TXI">
+                        <rect key="frame" x="162" y="20" width="135" height="24"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Preferences" id="iOI-q7-azw">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField appearanceType="aqua" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8ex-Fz-xjC">
+                        <rect key="frame" x="18" y="20" width="133" height="24"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Show Hideen FIle" id="QmI-J5-W1b">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
+            </view>
+            <point key="canvasLocation" x="308.5" y="1216"/>
+        </window>
+    </objects>
+    <resources>
+        <image name="logo" width="372.3636474609375" height="372.3636474609375"/>
+        <image name="setting" width="372.3636474609375" height="372.3636474609375"/>
+        <image name="showfile" width="372.3636474609375" height="372.3636474609375"/>
+    </resources>
+</document>
